@@ -19,8 +19,13 @@ Before you begin setting up an Amazon Redshift cluster, make sure that you compl
 
 If you don’t already have an AWS account, you must sign up for one. 
 
-1.  Open [https://aws.amazon.com/education/awseducate/](https://aws.amazon.com/education/awseducate/).
-2.  Follow the online instructions.
+1. Open [https://aws.amazon.com/education/awseducate/](https://aws.amazon.com/education/awseducate/).
+
+2. Follow the online instructions.
+
+   **Important**
+
+   Do not create AWS Educate Starter account because it does not support Redshift.
 
 Then you can log in [AWS Management Console](https://console.aws.amazon.com/)
 
