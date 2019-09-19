@@ -108,7 +108,7 @@ _The cluster that you are about to launch is live (and not running in a sandbox)
 
    *   **Node type**: Choose **dc2.large**.
    *   **Number of compute nodes**: Keep the default value of **2**.
-   *   **Cluster identifier**: Enter the value **redshift-cluster-<NetID>**.
+   *   **Cluster identifier**: Enter the value **redshift-cluster-NetID**.
    *   **Master user name**: Keep the default value of **awsuser**.
    *   **Master user password** and **Confirm password**: Enter a password for the master user account.
    *   **Database port**: Accept the default value of **5439**.
