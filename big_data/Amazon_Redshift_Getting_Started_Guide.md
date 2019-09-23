@@ -706,15 +706,15 @@ When you have completed this tutorial, you should reset your environment to the 
 
 # [Screenshots for submission](#screenshots)
 
-1. Query editor
+1. Query editor (Must include `redshift-cluster-<NetID>`)
 
    ![2019-08-30_19-10](https://github.com/liuhoward/teaching/raw/master/big_data/redshift/2019-08-30_19-10.png)
 
-2. SQL workbench
+2. SQL workbench (Must take the whole screen of SQL workbench)
 
    ![2019-08-30_19-46](https://github.com/liuhoward/teaching/raw/master/big_data/redshift/2019-08-30_19-46.png)
 
-3. Details of the most recent query
+3. Details of the most recent query (Must include `redshift-cluster-<NetID>`)
 
    ![2019-08-30_19-48](https://github.com/liuhoward/teaching/raw/master/big_data/redshift/2019-08-30_19-48.png)
 
