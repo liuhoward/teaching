@@ -708,7 +708,7 @@ When you have completed this tutorial, you should reset your environment to the 
 
 # [Screenshots for submission](#screenshots)
 
-1. Query editor (Must include `redshift-cluster-<NetID>`)
+1. Query editor (Must include Cluster name `redshift-cluster-<NetID>`)
 
    ![2019-08-30_19-10](https://github.com/liuhoward/teaching/raw/master/big_data/redshift/2019-08-30_19-10.png)
 
