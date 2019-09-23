@@ -157,12 +157,14 @@ In the previous step, you launched your Amazon Redshift cluster. Before you can 
 
 5. Choose **Edit**, **Add Rule**, and enter the following, then choose **Save**:
 
-   * **redshift-cluster-NetID Type**: **Custom TCP Rule**.
+   * **redshift-cluster-NetID** 
+
+   * **Type: Custom TCP Rule**.
 
    * **Protocol**: **TCP**.
 
    * **Port Range**: type the same port number that you used when you launched the cluster. The default port for Amazon Redshift is `5439`, but your port might be different.
-
+   
    *   **Source**: select **Custom**, then type `0.0.0.0/0`. 
        
        **Important**  
