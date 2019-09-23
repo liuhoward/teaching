@@ -108,7 +108,7 @@ _The cluster that you are about to launch is live (and not running in a sandbox)
 
    *   **Node type**: Choose **dc2.large**.
    *   **Number of compute nodes**: Keep the default value of **2**.
-   *   **Cluster identifier**: Enter the value **redshift-cluster-NetID**.
+   *   **Cluster identifier**: Enter the value **redshift-cluster-NetID** (You must include your NetID for homework submission).
    *   **Master user name**: Keep the default value of **awsuser**.
    *   **Master user password** and **Confirm password**: Enter a password for the master user account.
    *   **Database port**: Accept the default value of **5439**.
@@ -157,7 +157,7 @@ In the previous step, you launched your Amazon Redshift cluster. Before you can 
 
 5. Choose **Edit**, **Add Rule**, and enter the following, then choose **Save**:
 
-   * **redshift-cluster-<NetID>Type**: **Custom TCP Rule**.
+   * **redshift-cluster-NetID Type**: **Custom TCP Rule**.
 
    * **Protocol**: **TCP**.
 
@@ -268,7 +268,7 @@ In the following example, you use the Query Editor to perform the following task
     
 3.  In the **Credentials** dialog box, enter the following values and then choose **Connect**:
     
-    * **Cluster**: Choose **redshift-cluster-<NetID>**.
+    * **Cluster**: Choose **redshift-cluster-NetID**.
     
     * **Database**: **dev**.
     
@@ -668,7 +668,7 @@ When you have completed this tutorial, you should reset your environment to the 
 
 1.  In the Amazon Redshift console, in the navigation pane, choose **Clusters**.
     
-2.  Choose **redshift-cluster-<NetID>** to open it, and make sure that you are on the **Configuration** tab.
+2.  Choose **redshift-cluster-NetID** to open it, and make sure that you are on the **Configuration** tab.
     
 3.  Under **Cluster Properties**, choose the VPC security group.  
     
