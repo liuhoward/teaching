@@ -2,13 +2,11 @@
 
 
 
-
-
 Please follow below steps to setup and install below software, make sure your hard drive has at least 20GB free space: 
 
 (For MAC users, ask IT to install Windows and perform below steps or borrow a windows laptop from UA library)
 
- 
+
 
 1. download Visual Studio Community 2017 from the Developers Tool section of Microsoft Imagine. Install the visual studio without Add-On’s (around 600 MB size) 
 
@@ -22,7 +20,11 @@ https://www.visualstudio.com/downloads/
 
 
 
+
+
 ![img](assets/clip_image005.png)
+
+
 
 2. Download SQL Server Express. 
 
@@ -87,12 +89,6 @@ https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-
  
 
 ![img](assets/clip_image027.png)
-
- 
-
- 
-
- 
 
  
 
