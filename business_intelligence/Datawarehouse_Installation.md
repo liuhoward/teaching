@@ -12,17 +12,17 @@ Please follow below steps to setup and install below software, make sure your ha
 
 https://www.visualstudio.com/downloads/
 
-![img](assets/clip_image001.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image001.png)
 
  
 
-![img](assets/clip_image003.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image003.png)
 
 
 
 
 
-![img](assets/clip_image005.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image005.png)
 
 
 
@@ -34,47 +34,47 @@ https://www.microsoft.com/en-us/sql-server/sql-server-downloads
 
 
 
-![img](assets/clip_image007.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image007.png)
 
 
 
-![img](assets/clip_image009.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image009.png)
 
  
 
 Click “New SQL Server stand-alone installation or add features …”
 
-![img](assets/clip_image011.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image011.png)
 
 
 
-![img](assets/clip_image013.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image013.png)
 
 
 
 If have Windows Firewall warning, You can turn off firewall in control panel or enable the required ports following the link  
 
-![img](assets/clip_image015.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image015.png)
 
 
 
-![img](assets/clip_image017.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image017.png)
 
 
 
-![img](assets/clip_image019.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image019.png)
 
 
 
-![img](assets/clip_image021.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image021.png)
 
 
 
-![img](assets/clip_image022.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image023.png)
 
 
 
-![img](assets/clip_image025.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image025.png)
 
  
 
@@ -88,7 +88,7 @@ https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-
 
  
 
-![img](assets/clip_image027.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image027.png)
 
  
 
@@ -96,7 +96,7 @@ https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-
 
 https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt
 
-![img](assets/clip_image029.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image029.png)
 
  
 
@@ -104,17 +104,17 @@ https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt
 
 After opening Visual Studio 2017, choose File Tab -> New -> Project, from left sidebar, you should be able to find Installed -> Business Intelligence -> Integration Services, and create new project.
 
-![img](assets/clip_image031.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image031.png)
 
  
 
 6. Open Microsoft SQL server Management Studio. Choose server type as Database Engine, Appropriate server name and authentication as Windows Authentication. Click Connect. You should get an object explorer window. On drilling down, you can see various folders, one of which is databases.
 
-![img](assets/clip_image033.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image033.png)
 
  
 
-![img](assets/clip_image035.png)
+![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image035.png)
 
  
 
@@ -122,7 +122,7 @@ After opening Visual Studio 2017, choose File Tab -> New -> Project, from left s
 
 **NOTE:**
 
-a.       For MAC users, ask IT to install Windows and perform above steps 
+a.       For MAC users, ask IT to install Windows or borrow a Windows laptop from UA library and perform above steps 
 
 b.       If you are not able to find the instance name/ Server name to connect to database engine. Follow below steps: 
 
@@ -132,6 +132,6 @@ Start->All Program->Microsoft SQL Server-> Configuration Tools-> SQL Server Conf
 
 Verify the name of server instance. Check the state of Server instance. It should be in running state
 
-c.       You can use the following or any other such video as a guide to installation 
+c.       You can use the following or any other such video as a guide to install
 
 https://www.youtube.com/watch?v=UcsItGq3mmM
