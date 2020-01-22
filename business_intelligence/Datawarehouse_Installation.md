@@ -18,11 +18,11 @@ https://www.visualstudio.com/downloads/
 
  
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image004.png)
+![img](assets/clip_image004.png)
 
 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image006.png)
+![img](assets/clip_image006.png)
 
 2. Download SQL Server Express. 
 
@@ -32,47 +32,47 @@ https://www.microsoft.com/en-us/sql-server/sql-server-downloads
 
 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image008.png)
+![img](assets/clip_image008.png)
 
 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image010.png)
+![img](assets/clip_image010.png)
 
  
 
 Click “New SQL Server stand-alone installation or add features …”
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image012.png)
+![img](assets/clip_image012.png)
 
 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image014.png)
+![img](assets/clip_image014.png)
 
 
 
 If have Windows Firewall warning, You can turn off firewall in control panel or enable the required ports following the link  
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image016.png)
+![img](assets/clip_image016.png)
 
 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image018.png)
+![img](assets/clip_image018.png)
 
 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image020.png)
+![img](assets/clip_image020.png)
 
 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image022.png)
+![img](assets/clip_image022.png)
 
 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image024.png)
+![img](assets/clip_image024.png)
 
 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image026.png)
+![img](assets/clip_image026.png)
 
  
 
@@ -86,7 +86,7 @@ https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-
 
  
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image028.png)
+![img](assets/clip_image028.png)
 
  
 
@@ -100,7 +100,7 @@ https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-
 
 https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image030.png)
+![img](assets/clip_image030.png)
 
  
 
@@ -108,17 +108,17 @@ https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt
 
 After opening Visual Studio 2017, choose File Tab -> New -> Project, from left sidebar, you should be able to find Installed -> Business Intelligence -> Integration Services, and create new project.
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image032.png)
+![img](assets/clip_image032.png)
 
  
 
 6. Open Microsoft SQL server Management Studio. Choose server type as Database Engine, Appropriate server name and authentication as Windows Authentication. Click Connect. You should get an object explorer window. On drilling down, you can see various folders, one of which is databases.
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image034.png)
+![img](assets/clip_image034.png)
 
  
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image036.png)
+![img](assets/clip_image036.png)
 
  
 
