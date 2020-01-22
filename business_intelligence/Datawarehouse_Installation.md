@@ -14,15 +14,15 @@ Please follow below steps to setup and install below software, make sure your ha
 
 https://www.visualstudio.com/downloads/
 
-![img](assets/clip_image002.png)
+![img](assets/clip_image001.png)
 
  
 
-![img](assets/clip_image004.png)
+![img](assets/clip_image003.png)
 
 
 
-![img](assets/clip_image006.png)
+![img](assets/clip_image005.png)
 
 2. Download SQL Server Express. 
 
@@ -32,35 +32,39 @@ https://www.microsoft.com/en-us/sql-server/sql-server-downloads
 
 
 
-![img](assets/clip_image008.png)
+![img](assets/clip_image007.png)
 
 
 
-![img](assets/clip_image010.png)
+![img](assets/clip_image009.png)
 
  
 
 Click “New SQL Server stand-alone installation or add features …”
 
-![img](assets/clip_image012.png)
+![img](assets/clip_image011.png)
 
 
 
-![img](assets/clip_image014.png)
+![img](assets/clip_image013.png)
 
 
 
 If have Windows Firewall warning, You can turn off firewall in control panel or enable the required ports following the link  
 
-![img](assets/clip_image016.png)
+![img](assets/clip_image015.png)
 
 
 
-![img](assets/clip_image018.png)
+![img](assets/clip_image017.png)
 
 
 
-![img](assets/clip_image020.png)
+![img](assets/clip_image019.png)
+
+
+
+![img](assets/clip_image021.png)
 
 
 
@@ -68,11 +72,7 @@ If have Windows Firewall warning, You can turn off firewall in control panel or 
 
 
 
-![img](assets/clip_image024.png)
-
-
-
-![img](assets/clip_image026.png)
+![img](assets/clip_image025.png)
 
  
 
@@ -86,7 +86,7 @@ https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-
 
  
 
-![img](assets/clip_image028.png)
+![img](assets/clip_image027.png)
 
  
 
@@ -100,7 +100,7 @@ https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-
 
 https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt
 
-![img](assets/clip_image030.png)
+![img](assets/clip_image029.png)
 
  
 
@@ -108,17 +108,17 @@ https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt
 
 After opening Visual Studio 2017, choose File Tab -> New -> Project, from left sidebar, you should be able to find Installed -> Business Intelligence -> Integration Services, and create new project.
 
-![img](assets/clip_image032.png)
+![img](assets/clip_image031.png)
 
  
 
 6. Open Microsoft SQL server Management Studio. Choose server type as Database Engine, Appropriate server name and authentication as Windows Authentication. Click Connect. You should get an object explorer window. On drilling down, you can see various folders, one of which is databases.
 
-![img](assets/clip_image034.png)
+![img](assets/clip_image033.png)
 
  
 
-![img](assets/clip_image036.png)
+![img](assets/clip_image035.png)
 
  
 
