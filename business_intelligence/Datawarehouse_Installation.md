@@ -77,7 +77,7 @@ Download SQL Server Management studio (latest version) from https://docs.microso
 
 Click on `Download SQL Server Management Studio (SSMS)`
 
-Run the installation files 
+Execute the installation files 
 
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image027.png)
@@ -85,8 +85,9 @@ Run the installation files
  
 
 ### 4. SQL Server Data Tools
-Download SQL Server Data Tools (Download SSDT for Visual Studio 2017) from the below link (find “SSDT standalone installer”)  
-https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt
+Download SQL Server Data Tools (Download SSDT for Visual Studio 2017) from https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt
+find `SSDT standalone installer`
+https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017#ssdt-for-vs-2017-standalone-installer
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image029.png)
 
