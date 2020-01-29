@@ -8,7 +8,10 @@ Please follow below steps to setup and install below software, make sure your ha
 
 
 
-1. download Visual Studio Community 2017 from the Developers Tool section of Microsoft Imagine. Install the visual studio without Add-On’s (around 600 MB size) 
+[TOC]
+
+### 1. Visual Studio Community 2017
+Download Visual Studio Community 2017 from the Developers Tool section of Microsoft Imagine. Install the visual studio without Add-On’s (around 600 MB size) 
 
 https://www.visualstudio.com/downloads/
 
@@ -26,13 +29,11 @@ https://www.visualstudio.com/downloads/
 
 
 
-2. Download SQL Server Express. 
 
-Click on Customize. Follow the instructions to set up SQL Server. Make a note of Server Instance Name. Choose authentication as Windows Authentication 
+### 2. SQL Server Express
+Download SQL Server Express from https://www.microsoft.com/en-us/sql-server/sql-server-downloads
 
-https://www.microsoft.com/en-us/sql-server/sql-server-downloads
-
-
+Click on `Customize`. Follow the instructions to set up SQL Server. Make a note of Server Instance Name. Choose authentication as Windows Authentication 
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image007.png)
 
@@ -76,31 +77,29 @@ If have Windows Firewall warning, You can turn off firewall in control panel or 
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image025.png)
 
- 
+ **Attention:** if you encounter errors, you may check the service `windows modules installer` is running following the **[7. Note](#7. Note)** part in the end of this tutorial.
 
-3. Install SQL Server Management studio (latest version) 
+### 3.  SQL Server Management studio
+Download SQL Server Management studio (latest version) from https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
 
-Click on ‘Download SQL Server Management Studio 17.4**’** 
+Click on `Download SQL Server Management Studio (SSMS)`
 
 Run the installation files 
 
-https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
-
- 
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image027.png)
 
  
 
-4. Next download SQL Server Data Tools (Download SSDT for Visual Studio 2017) from the below link (find “SSDT standalone installer”)
-
+### 4. SQL Server Data Tools
+Download SQL Server Data Tools (Download SSDT for Visual Studio 2017) from the below link (find “SSDT standalone installer”)  
 https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image029.png)
 
  
 
-5. After SQL Server Data Tools has been installed, open Visual Studio 2017. 
+### 5. After SQL Server Data Tools has been installed, open Visual Studio 2017. 
 
 After opening Visual Studio 2017, choose File Tab -> New -> Project, from left sidebar, you should be able to find Installed -> Business Intelligence -> Integration Services, and create new project.
 
@@ -108,7 +107,8 @@ After opening Visual Studio 2017, choose File Tab -> New -> Project, from left s
 
  
 
-6. Open Microsoft SQL server Management Studio. Choose server type as Database Engine, Appropriate server name and authentication as Windows Authentication. Click Connect. You should get an object explorer window. On drilling down, you can see various folders, one of which is databases.
+### 6. Open Microsoft SQL server Management Studio. 
+Choose server type as Database Engine, Appropriate server name and authentication as Windows Authentication. Click Connect. You should get an object explorer window. On drilling down, you can see various folders, one of which is databases.
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image033.png)
 
@@ -120,11 +120,11 @@ After opening Visual Studio 2017, choose File Tab -> New -> Project, from left s
 
  
 
-**NOTE:**
+### 7. NOTE
 
-a.       For MAC users, ask IT to install Windows or borrow a Windows laptop from UA library and perform above steps 
+1. For MAC users, ask IT to install Windows or borrow a Windows laptop from UA library and perform above steps 
 
-b.       If you are not able to find the instance name/ Server name to connect to database engine. Follow below steps: 
+2. If you are not able to find the instance name/ Server name to connect to database engine. Follow below steps: 
 
 Navigate to: 
 
@@ -132,6 +132,20 @@ Start->All Program->Microsoft SQL Server-> Configuration Tools-> SQL Server Conf
 
 Verify the name of server instance. Check the state of Server instance. It should be in running state
 
-c.       You can use the following or any other such video as a guide to install
+3. If you encounter error when you install SQL Server Express, please check the service `Windows module installer` is running as following:
+
+* press `win + r`, input 'services.msc'
+
+ ![1](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/1.PNG)
+
+* find the service `Windows module installer` and double click
+
+  ![2](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/2.PNG)
+
+* make sure the `service status` is `running` or else click `start`.
+
+  ![3](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/3.PNG)
+
+4. You can use the following or any other such video as a guide to install
 
 https://www.youtube.com/watch?v=UcsItGq3mmM
