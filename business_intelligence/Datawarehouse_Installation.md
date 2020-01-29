@@ -7,23 +7,16 @@ Please follow below steps to setup and install below software, make sure your ha
 (For MAC users, ask IT to install Windows and perform below steps or borrow a windows laptop from UA library)
 
 
-
 [TOC]
 
-### 1. Visual Studio Community 2017
-Download Visual Studio Community 2017 from the Developers Tool section of Microsoft Imagine. Install the visual studio without Add-On’s (around 600 MB size) 
+### 1. Visual Studio Community
+Download Visual Studio Community  from the Developers Tool section of Microsoft Imagine. Install the visual studio without Add-On’s (around 600 MB size) 
 
-https://www.visualstudio.com/downloads/
+https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image001.png)
 
- 
-
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image003.png)
-
-
-
-
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image005.png)
 
@@ -31,13 +24,11 @@ https://www.visualstudio.com/downloads/
 
 
 ### 2. SQL Server Express
-Download SQL Server Express from https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+Download SQL Server Express from https://www.microsoft.com/en-us/sql-server/sql-server-2017-editions
 
 Click on `Customize`. Follow the instructions to set up SQL Server. Make a note of Server Instance Name. Choose authentication as Windows Authentication 
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image007.png)
-
-
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image009.png)
 
@@ -77,7 +68,9 @@ If have Windows Firewall warning, You can turn off firewall in control panel or 
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image025.png)
 
- **Attention:** if you encounter errors, you may check the service `windows modules installer` is running following the **[7. Note](#7. Note)** part in the end of this tutorial.
+ 
+
+**Attention:** if you encounter errors, you may check the service `windows modules installer` is running following the **[7. Note](#7. Note)** part in the end of this tutorial.
 
 ### 3.  SQL Server Management studio
 Download SQL Server Management studio (latest version) from https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
