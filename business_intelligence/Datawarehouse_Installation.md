@@ -95,7 +95,7 @@ https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?vi
 
 ### 5. After SQL Server Data Tools has been installed, open Visual Studio 2017. 
 
-After opening Visual Studio 2017, choose File Tab -> New -> Project, from left sidebar, you should be able to find Installed -> Business Intelligence -> Integration Services, and create new project.
+After opening Visual Studio 2017, choose `File -> New -> Project`, from left sidebar, you should be able to find Installed -> Business Intelligence -> Integration Services, and create new project.
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/assets/clip_image031.png)
 
