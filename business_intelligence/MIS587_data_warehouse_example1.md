@@ -32,69 +32,53 @@ Install SQL Server Express, SQL Server Management studio, SQL Server Data Tools,
 
 ### Description step by step:
 
-We will extract tables from Northwind database, import data into Northwind_DW database and build star schema.
+We will extract tables from [Northwind database](https://github.com/liuhoward/teaching/blob/master/business_intelligence/Northwind-Sample-Database-Diagram.pdf), import data into Northwind_DW database and build star schema.
 
-1)    Open Microsoft SQL server Management Studio.
+1. Open Microsoft SQL server Management Studio.
 
-![1](C:/Users/hao/Pictures/1.PNG)
+   ![1](MIS587_data_warehouse_example1.assets/1.PNG)
 
-2)    Build Northwind database as data source:
+2. Build Northwind database as data source:
 
 click `New Query`, copy sql code from the [link](https://raw.githubusercontent.com/liuhoward/teaching/master/business_intelligence/instnwnd.sql.txt), paste the code into query editor, click `Execute`, you will find a database `Northwind` in left sidebar. This contains Inventory source tables with data. Relevant attributes for each entity are present in the tables.
 
-![2](C:/Users/hao/Pictures/2.PNG)                                
+![2](MIS587_data_warehouse_example1.assets/2.PNG)                                
+
+3. Build a database named ‘Northwind_DW’ with empty tables for the Northwind Data warehouse using [sql code](https://raw.githubusercontent.com/liuhoward/teaching/master/business_intelligence/Northwind_DW_init.sql.txt) like previous step. Refresh database list, you will find a new database `Northwind_DW`.
+
+![3](MIS587_data_warehouse_example1.assets/3.PNG)
 
 
 
-3)    Build an empty database named ‘Northwind_DW’ for the Northwind Data warehouse using [sql code](https://raw.githubusercontent.com/liuhoward/teaching/master/business_intelligence/Northwind_DW_init.sql.txt)
+Now, Microsoft Visual Studio will be used to load the data to the northwind data warehouse from the Northwind database, after doing certain transformations.
 
-   
+4. Open Microsoft Visual Studio. Choose `File-> New->Project`
 
- 
+   ![1580888098115](MIS587_data_warehouse_example1.assets/1580888098115.png)
 
-4)    Now, Microsoft Visual Studio will be used to load the data to the northwind data warehouse from the Northwind database, after doing certain transformations.
+5.  A window `New Project` pops up. Choose `Business Intelligence->Integration Services Project`
 
-5)    Open Microsoft Visual Studio. Choose File-> New->Project
+![4](MIS587_data_warehouse_example1.assets/4.PNG)
 
- 
+6. You should get a blank screen as below:
 
-   
+![5](MIS587_data_warehouse_example1.assets/5.PNG)
 
- 
 
-6)    A window ‘New Project’ pops up. Choose Business Intelligence->Integration Services Project
 
-   
+Using Microsoft Visual Studio, Microsoft SQL server is accessed for the data integration of the Northwind Data warehouse.
 
- 
+7. From left sidebar, Drag and drop `Data Flow task` onto the workspace. Rename it as `Order Dimension`
 
-7)    You should get a blank screen as below:
+![7](MIS587_data_warehouse_example1.assets/7.PNG)
 
-   
+8. Double Click on the `Order Dimension` data flow. You should see a page like below open.
 
- 
+![8](MIS587_data_warehouse_example1.assets/8.PNG)
 
-8)    Using Microsoft Visual Studio, Microsoft SQL server is accessed for the data integration of the Northwind Data warehouse.
+9.  On the left-hand bar, Drag `OLE DB Source` from `Other Sources`  on to the workspace and `OLE DB Destinations` under `Other Destinations` onto the workspace. Join both using the blue arrow.
 
- 
-
-9)    Drag and drop “Data Flow task” onto the workspace. Rename is as ‘order dimension load’
-
-   
-
- 
-
-10) Double Click on the Order Dimension data flow. You should see a page like below open.
-
-   
-
- 
-
-11) Drag “OLE DB Source” from “Other Sources” on the left-hand bar on to the workspace and “OLE DB destinations” under “Other destinations” onto the workspace. Join both using the blue arrow.
-
-   
-
- 
+   ![9](MIS587_data_warehouse_example1.assets/9.PNG)
 
 12) Double Click on the “OLE DB Source”. 
 
