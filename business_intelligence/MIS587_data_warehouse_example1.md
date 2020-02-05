@@ -69,7 +69,6 @@ Now, Microsoft Visual Studio will be used to load the data to the northwind data
 Using Microsoft Visual Studio, Microsoft SQL server is accessed for the data integration of the Northwind Data warehouse.
 
 7. From left sidebar, Drag and drop `Data Flow task` onto the workspace. Rename it as `Order Dimension`
-
 ![7](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/7.PNG)
 
 8. Double Click on the `Order Dimension` data flow. You should see a page like below open.
@@ -80,33 +79,27 @@ Using Microsoft Visual Studio, Microsoft SQL server is accessed for the data int
 
 ![9](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/9.PNG)
 
-12) Double Click on the “OLE DB Source”. 
+10. Double Click on the `OLE DB Source`. 
 
-   
+![1580890146985](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1580890146985.png)
 
-13) Click “New” Button to create a new connection manager. This creates a new connection to a database installed on Microsoft SQL server.
+11. Click “New” Button to create a new connection manager. This creates a new connection to a database installed on Microsoft SQL server.
 
- 
+![1580890186745](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1580890186745.png)
 
-   
+12. In the field “Server Name”, Type in the name of the Microsoft SQL Server installed on your computer. In SQL Sever Management Studio, the name to choose is shown by right click on your server name, choose `Properties`.
 
-14) In the field “Server Name”, Type in the name of the Microsoft SQL Server installed on your computer. The name to choose is shown in the screenshot of Microsoft SQL server below.
+![Screenshot (https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/Screenshot (1).png)](C:/Users/hao/Pictures/Screenshots/Screenshot (1).png)
 
-   
+![10](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/10.PNG)
 
- 
+13. Next, under Select or enter a database name, choose “Northwind” Database. Click OK.
 
-15)  Next, under Select or enter a database name, choose “Northwind” Database. Click OK.
+![11](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/11.PNG)
 
- 
+14. Now choose “Orders” table under “Name of the table or view”. Click OK.
 
-   
-
- 
-
-16)  Now choose “Orders” table under “Name of the table or view”. Click OK.
-
-   
+![1580890791647](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1580890791647.png)
 
  
 
