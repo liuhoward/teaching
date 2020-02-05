@@ -1,0 +1,329 @@
+USE master
+GO
+if exists (select * from sysdatabases where name='Northwind_DW')
+		drop database Northwind_DW
+go
+
+
+DECLARE @device_directory NVARCHAR(520)
+SELECT @device_directory = SUBSTRING(filename, 1, CHARINDEX(N'master.mdf', LOWER(filename)) - 1)
+FROM master.dbo.sysaltfiles WHERE dbid = 1 AND fileid = 1
+
+EXECUTE (N'CREATE DATABASE Northwind_DW
+  ON PRIMARY (NAME = N''Northwind_DW'', FILENAME = N''' + @device_directory + N'northwind_dw.mdf'')
+  LOG ON (NAME = N''Northwind_DW_log'',  FILENAME = N''' + @device_directory + N'northwind_dw.ldf'')')
+go
+
+if CAST(SERVERPROPERTY('ProductMajorVersion') AS INT)<12 
+BEGIN
+  exec sp_dboption 'Northwind_DW','trunc. log on chkpt.','true'
+  exec sp_dboption 'Northwind_DW','select into/bulkcopy','true'
+END
+ELSE ALTER DATABASE [Northwind_DW] SET RECOVERY SIMPLE WITH NO_WAIT
+GO
+
+USE Northwind_DW
+GO
+
+/****** Object:  Table [dbo].[Dim Categories]    Script Date: 2/8/2018 11:44:21 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE TABLE [dbo].[Dim Categories](
+	[CategoryID] [int] NOT NULL,
+	[CategoryName] [nvarchar](15) NOT NULL,
+	[Description] [ntext] NULL,
+	[Picture] [image] NULL,
+	[Category Skey] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_Dim Categories] PRIMARY KEY CLUSTERED 
+(
+	[CategoryID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[Dim Employees]    Script Date: 2/8/2018 11:44:32 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Dim Employees](
+	[EmployeeID] [int] NOT NULL,
+	[LastName] [nvarchar](20) NOT NULL,
+	[FirstName] [nvarchar](10) NOT NULL,
+	[Title] [nvarchar](30) NULL,
+	[TitleofCourtesy] [nvarchar](25) NULL,
+	[BirthDate] [datetime] NULL,
+	[HireDate] [datetime] NULL,
+	[Address] [nvarchar](60) NULL,
+	[City] [nvarchar](15) NULL,
+	[Region] [nvarchar](15) NULL,
+	[PostalCode] [nvarchar](10) NULL,
+	[Country] [nvarchar](15) NULL,
+	[HomePhone] [nvarchar](24) NULL,
+	[Extension] [nchar](4) NULL,
+	[Photo] [image] NULL,
+	[Notes] [ntext] NULL,
+	[ReportsTo] [int] NULL,
+	[PhotoPath] [nvarchar](255) NULL,
+	[Employee Skey] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_Dim Employees] PRIMARY KEY CLUSTERED 
+(
+	[EmployeeID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[Dim Orders]    Script Date: 2/8/2018 11:44:45 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE TABLE [dbo].[Dim Orders](
+	[OrderID] [int] NOT NULL,
+	[CustomerID] [nchar](5) NULL,
+	[EmployeeID] [int] NULL,
+	[OrderDate] [datetime] NULL,
+	[RequiredDate] [datetime] NULL,
+	[ShippedDate] [datetime] NULL,
+	[ShipVia] [int] NULL,
+	[Freight] [money] NULL,
+	[ShipName] [nchar](40) NULL,
+	[ShipAddress] [nchar](60) NULL,
+	[ShipCity] [nchar](15) NULL,
+	[ShipRegion] [nchar](15) NULL,
+	[ShipPostalCode] [nchar](10) NULL,
+	[ShipCountry] [nchar](15) NULL,
+	[Order Skey] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_Dim Orders] PRIMARY KEY CLUSTERED 
+(
+	[OrderID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[Dim Products]    Script Date: 2/8/2018 11:44:52 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE TABLE [dbo].[Dim Products](
+	[ProductID] [int] NOT NULL,
+	[ProductName] [nchar](40) NOT NULL,
+	[SupplierID] [int] NULL,
+	[CategoryID] [int] NULL,
+	[QuantityPerUnit] [nchar](20) NULL,
+	[UnitPrice] [money] NULL,
+	[UnitsInStock] [smallint] NULL,
+	[UnitsOnOrder] [smallint] NULL,
+	[ReorderLevel] [smallint] NULL,
+	[Discontinued] [bit] NOT NULL,
+	[Product Skey] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_Dim Products] PRIMARY KEY CLUSTERED 
+(
+	[ProductID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[Dim Shippers]    Script Date: 2/8/2018 11:45:03 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Dim Shippers](
+	[ShipperID] [int] NOT NULL,
+	[CompanyName] [nvarchar](40) NOT NULL,
+	[Phone] [nchar](24) NULL,
+	[Shipper Skey] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_Dim Shippers] PRIMARY KEY CLUSTERED 
+(
+	[ShipperID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[Dim Suppliers]    Script Date: 2/8/2018 11:45:12 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE TABLE [dbo].[Dim Suppliers](
+	[SupplierID] [int] NOT NULL,
+	[CompanyName] [nvarchar](40) NOT NULL,
+	[ContactName] [nvarchar](30) NULL,
+	[ContactTitle] [nvarchar](40) NULL,
+	[Address] [nvarchar](60) NULL,
+	[City] [nvarchar](15) NULL,
+	[Region] [nvarchar](15) NULL,
+	[PostalCode] [nvarchar](10) NULL,
+	[Country] [nvarchar](15) NULL,
+	[Phone] [nvarchar](24) NULL,
+	[Hompage] [ntext] NULL,
+	[Supplier Skey] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_Dim Suppliers] PRIMARY KEY CLUSTERED 
+(
+	[SupplierID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+
+/****** Object:  Table [dbo].[Dim_Time]    Script Date: 2/8/2018 11:45:30 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE TABLE [dbo].[Dim_Time](
+	[Date skey] [int] IDENTITY(1,1) NOT NULL,
+	[Date] [date] NOT NULL,
+	[DateString] [varchar](10) NULL,
+	[Day] [int] NULL,
+	[DayofYear] [int] NULL,
+	[DayofWeek] [int] NULL,
+	[DayofWeekName] [varchar](10) NULL,
+	[Week] [int] NULL,
+	[Month] [int] NULL,
+	[MonthName] [varchar](10) NULL,
+	[Quarter] [int] NULL,
+	[Year] [int] NULL,
+	[IsWeekend] [bit] NULL,
+	[IsLeapYear] [bit] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Date] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+-- Declare and set variables for loop
+Declare
+@StartDate datetime,
+@EndDate datetime,
+@Date datetime
+ 
+Set @StartDate = '1996/07/01'
+Set @EndDate = '2000/12/31'
+Set @Date = @StartDate
+ 
+-- Loop through dates
+WHILE @Date <=@EndDate
+BEGIN
+    -- Check for leap year
+    DECLARE @IsLeapYear BIT
+    IF ((Year(@Date) % 4 = 0) AND (Year(@Date) % 100 != 0 OR Year(@Date) % 400 = 0))
+    BEGIN
+        SELECT @IsLeapYear = 1
+    END
+    ELSE
+    BEGIN
+        SELECT @IsLeapYear = 0
+    END
+ 
+    -- Check for weekend
+    DECLARE @IsWeekend BIT
+    IF (DATEPART(dw, @Date) = 1 OR DATEPART(dw, @Date) = 7)
+    BEGIN
+        SELECT @IsWeekend = 1
+    END
+    ELSE
+    BEGIN
+        SELECT @IsWeekend = 0
+    END
+ 
+    -- Insert record in dimension table
+    INSERT Into [Dim_Time]
+    (
+    [Date],
+    [DateString],
+    [Day],
+    [DayofYear],
+    [DayofWeek],
+    [Dayofweekname],
+    [Week],
+    [Month],
+    [MonthName],
+    [Quarter],
+    [Year],
+    [IsWeekend],
+    [IsLeapYear]
+    )
+    Values
+    (
+    @Date,
+    CONVERT(varchar(10), @Date, 105), -- See links for 105 explanation
+    Day(@Date),
+    DATEPART(dy, @Date),
+    DATEPART(dw, @Date),
+    DATENAME(dw, @Date),
+    DATEPART(wk, @Date),
+    DATEPART(mm, @Date),
+    DATENAME(mm, @Date),
+    DATENAME(qq, @Date),
+    Year(@Date),
+    @IsWeekend,
+    @IsLeapYear
+    )
+ 
+    -- Goto next day
+    Set @Date = @Date + 1
+END
+GO
+
+
+
+/****** Object:  Table [dbo].[Fact Order Details]    Script Date: 2/8/2018 11:45:39 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE TABLE [dbo].[Fact Order Details](
+	[OrderID] [int] NOT NULL,
+	[ProductID] [int] NOT NULL,
+	[UnitPrice] [money] NOT NULL,
+	[Quantity] [smallint] NOT NULL,
+	[Discount] [real] NOT NULL,
+	[Category Skey] [int] NOT NULL,
+	[Employee Skey] [int] NOT NULL,
+	[Order Skey] [int] NOT NULL,
+	[Products Skey] [int] NOT NULL,
+	[Shippers Skey] [int] NOT NULL,
+	[Suppliers Skey] [int] NOT NULL,
+	[Time Skey] [int] NULL,
+ CONSTRAINT [PK_Fact Order Details] PRIMARY KEY CLUSTERED 
+(
+	[OrderID] ASC,
+	[ProductID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
