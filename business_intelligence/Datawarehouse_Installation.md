@@ -24,7 +24,7 @@ https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes
 
 
 ### 2. SQL Server Express
-Download SQL Server Express from https://www.microsoft.com/en-us/sql-server/sql-server-2017-editions
+Download SQL Server Express from https://www.microsoft.com/en-us/download/details.aspx?id=55994
 
 Click on `Customize`. Follow the instructions to set up SQL Server. Make a note of Server Instance Name. Choose authentication as Windows Authentication 
 
