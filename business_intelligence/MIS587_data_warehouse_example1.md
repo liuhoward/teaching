@@ -101,39 +101,36 @@ Using Microsoft Visual Studio, Microsoft SQL server is accessed for the data int
 
 ![1580890791647](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1580890791647.png)
 
- 
 
-17) In the Data Flow workspace, double click on the “OLE DB destination” and Create a connection manager to the Northwind_DW Database. Repeat Steps 13-16 to create a new connection manager similar to what was done for the northwind database.
+15.  In the Data Flow workspace, double click on the “OLE DB destination” and Create a connection manager to the Northwind_DW Database. Repeat Steps 11-13 to create a new connection manager similar to what was done for the northwind database.
 
-18) After the new connection manager has been set up, Choose “Dim Orders”. This is a dimension created to hold basic qualitative attributes about orders. Choose OK.
+![1582066668981](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582066668981.png)
 
-   
 
- 
+16. After the new connection manager has been set up, Choose “Dim Orders”. This is a dimension created to hold basic qualitative attributes about orders. Click "Mappings", then Choose OK. "Errors" of "OLE DB Source" and "OLE DB Destination" disappear.
 
-19) Repeat this procedure for supplier, category, shipper, product, employee dimensions. Then join them as shown below:
+![1582066842117](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582066842117.png)
 
-   
+![1582066956388](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582066956388.png)
 
- 
 
-20)  The Inventory Fact table is loaded from the Inventory “order details” table. We already create an empty Fact table in Northwind_DW, foreign key placeholders are created, which will be populated later.
+17. Repeat this procedure for Supplier Dimension, Category Dimension, Shipper Dimension, Product Dimension, Employee Dimension. Then join them as shown below:
 
- 
+![1582067614443](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582067614443.png)
 
-Similarly, drag ‘Data Flow Task’, rename it as ‘fact table’, double click, Like before, drag the DB source from the left pane, select ‘order details’ from Northwind database.
 
-   
+18. The Inventory Fact table is loaded from the Inventory “order details” table. We already create an empty Fact table in Northwind_DW, foreign key placeholders are created, which will be populated later.
 
- 
+    Similarly, drag ‘Data Flow Task’, rename it as `Fact Table`, double click, Like before, drag the DB source from the left pane, select ‘order details’ from Northwind database.
 
-   
+![1582067872939](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582067872939.png)
 
- 
+![1582068027442](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582068027442.png)
 
-21) Next choose the Lookup task from the left pane and drag it into the workspace. Join using a blue arrow.
+19. Next choose the Lookup task from the left pane under "common" and drag it into the workspace. Join using a blue arrow.
 
-   
+![1582068242165](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582068242165.png)
+
 
 22) Click on the lookup icon. Choose the Northwind_DW connection manager. Choose “Use results of a SQL query”. And paste the query from the “Time” section in the below text file.
 
