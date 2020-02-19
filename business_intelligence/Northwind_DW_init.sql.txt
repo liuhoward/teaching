@@ -200,7 +200,7 @@ GO
 
 
 CREATE TABLE [dbo].[Dim_Time](
-	[Date skey] [int] IDENTITY(1,1) NOT NULL,
+	[Time skey] [int] IDENTITY(1,1) NOT NULL,
 	[Date] [date] NOT NULL,
 	[DateString] [varchar](10) NULL,
 	[Day] [int] NULL,
@@ -315,9 +315,9 @@ CREATE TABLE [dbo].[Fact Order Details](
 	[Category Skey] [int] NOT NULL,
 	[Employee Skey] [int] NOT NULL,
 	[Order Skey] [int] NOT NULL,
-	[Products Skey] [int] NOT NULL,
-	[Shippers Skey] [int] NOT NULL,
-	[Suppliers Skey] [int] NOT NULL,
+	[Product Skey] [int] NOT NULL,
+	[Shipper Skey] [int] NOT NULL,
+	[Supplier Skey] [int] NOT NULL,
 	[Time Skey] [int] NULL,
  CONSTRAINT [PK_Fact Order Details] PRIMARY KEY CLUSTERED 
 (
