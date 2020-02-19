@@ -280,7 +280,7 @@ TRUNCATE TABLE [Fact Order Details];
 
 29. Go to Microsoft SQL server. The tables in the Northwind_DW database must have values now.
 
-![Screenshot] (https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/Screenshot2.png)
+![Screenshot2](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/Screenshot2.png)
 
 ![1582073629870](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582073629870.png)
 
