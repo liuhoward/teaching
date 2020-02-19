@@ -33,7 +33,7 @@ Install SQL Server Express, SQL Server Management studio, SQL Server Data Tools,
 
 ### Description step by step:
 
-We will extract tables from [Northwind database](https://github.com/liuhoward/teaching/blob/master/business_intelligence/Northwind-Sample-Database-Diagram.pdf), import data into Northwind_DW database and build star schema.
+We will extract tables from [Northwind database](https://github.com/liuhoward/teaching/blob/master/business_intelligence/Northwind-Sample-Database-Diagram.pdf), import data into `Northwind_DW` database and build star schema.
 
 1. Open Microsoft SQL server Management Studio.
 
@@ -45,7 +45,7 @@ click `New Query`, copy sql code from the [link](https://raw.githubusercontent.c
 
 ![2](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/2.PNG)                                
 
-3. Build a database named ‘Northwind_DW’ with empty tables for the Northwind Data warehouse using [sql code](https://raw.githubusercontent.com/liuhoward/teaching/master/business_intelligence/Northwind_DW_init.sql.txt) like previous step. Refresh database list, you will find a new database `Northwind_DW`.
+3. Build a database named `Northwind_DW` with empty tables for the `Northwind` Data warehouse using [sql code](https://raw.githubusercontent.com/liuhoward/teaching/master/business_intelligence/Northwind_DW_init.sql.txt) like previous step. Refresh database list, you will find a new database `Northwind_DW`.
 
 ![3](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/3.PNG)
 
@@ -84,57 +84,57 @@ Using Microsoft Visual Studio, Microsoft SQL server is accessed for the data int
 
 ![1580890146985](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1580890146985.png)
 
-11. Click “New” Button to create a new connection manager. This creates a new connection to a database installed on Microsoft SQL server.
+11. Click `New` Button to create a new connection manager. This creates a new connection to a database installed on Microsoft SQL server.
 
 ![1580890186745](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1580890186745.png)
 
-12. In the field “Server Name”, Type in the name of the Microsoft SQL Server installed on your computer. In SQL Sever Management Studio, the name to choose is shown by right click on your server name, choose `Properties`.
+12. In the field `Server Name`, Type in the name of the Microsoft SQL Server installed on your computer. In SQL Sever Management Studio, the name to choose is shown by right click on your server name, choose `Properties`.
 
 ![Screenshot1](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/Screenshot1.png)
 
 ![10](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/10.PNG)
 
-13. Next, under Select or enter a database name, choose “Northwind” Database. Click OK.
+13. Next, under Select or enter a database name, choose `Northwind` Database. Click OK.
 
 ![11](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/11.PNG)
 
-14. Now choose “Orders” table under “Name of the table or view”. Click OK.
+14. Now choose `Orders` table under `Name of the table or view`. Click OK.
 
 ![1580890791647](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1580890791647.png)
 
 
-15.  In the Data Flow workspace, double click on the “OLE DB destination” and Create a connection manager to the Northwind_DW Database. Repeat Steps 11-13 to create a new connection manager similar to what was done for the northwind database.
+15.  In the Data Flow workspace, double click on the `OLE DB destination` and Create a connection manager to the Northwind_DW Database. Repeat Steps 11-13 to create a new connection manager similar to what was done for the northwind database.
 
 ![1582066668981](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582066668981.png)
 
 
-16. After the new connection manager has been set up, Choose “Dim Orders”. This is a dimension created to hold basic qualitative attributes about orders. Click "Mappings", then Choose OK. "Errors" of "OLE DB Source" and "OLE DB Destination" disappear.
+16. After the new connection manager has been set up, Choose `Dim Orders`. This is a dimension created to hold basic qualitative attributes about orders. Click `Mappings`, then Choose OK. `Errors` of `OLE DB Source` and `OLE DB Destination` disappear.
 
 ![1582066842117](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582066842117.png)
 
 ![1582066956388](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582066956388.png)
 
 
-17. Repeat this procedure for Supplier Dimension, Category Dimension, Shipper Dimension, Product Dimension, Employee Dimension. Then join them as shown below:
+17. Repeat this procedure for `Supplier Dimension`, `Category Dimension`, `Shipper Dimension`, `Product Dimension`, `Employee Dimension`. Then join them as shown below:
 
 ![1582067614443](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582067614443.png)
 
 
-18. The Inventory Fact table is loaded from the Inventory “order details” table. We already create an empty Fact table in Northwind_DW, foreign key placeholders are created, which will be populated later.
+18. The Inventory Fact table is loaded from the Inventory `order details` table. We already create an empty Fact table in `Northwind_DW`, foreign key placeholders are created, which will be populated later.
 
-    Similarly, drag ‘Data Flow Task’, rename it as `Fact Table`, double click, Like before:
+    Similarly, drag `Data Flow Task`, rename it as `Fact Table`, double click, Like before:
 
 ![1582067872939](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582067872939.png)
 
-Drag the DB source from the left pane, select 'Order Details' from Northwind database.
+Drag the DB source from the left pane, select `Order Details` from Northwind database.
 
 ![1582068027442](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582068027442.png)
 
-19. Next choose the Lookup task from the left pane under "common" and drag it into the workspace. Join using a blue arrow.
+19. Next choose the Lookup task from the left pane under `common` and drag it into the workspace. Join using a blue arrow.
 
 ![1582068242165](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582068242165.png)
 
-20.  Click on the lookup icon. Click "Connection", Choose the Northwind_DW connection manager. Choose “Use results of a SQL query”. And paste the query below.
+20.  Click on the lookup icon. Click `Connection`, Choose the `Northwind_DW` connection manager. Choose `Use results of a SQL query`. And paste the query below.
 
 ```sql
 Select do.OrderID, dt.[Time skey] 
@@ -144,25 +144,25 @@ where do.OrderDate= dt.Date;
 
 ![1582071385129](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582071385129.png)
 
-21. In the “columns” section of the editor, link orderID. Choose “Time Skey”. Click Ok. 
+21. In the `columns` section of the editor, link `OrderID`. Choose `Time Skey`. Click OK. 
 
  ![1582071450161](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582071450161.png)
 
-22. Rename the lookup as `Time Lookup`. Join with “OLE DB source” using blue line.
+22. Rename the lookup as `Time Lookup`. Join with `OLE DB source` using blue line.
 
-23. Choose another lookup and drag it onto the workspace, rename it as `Order Lookup`. Connect time lookup blue to the order lookup, choose ‘lookup match output’
+23. Choose another lookup and drag it onto the workspace, rename it as `Order Lookup`. Connect time lookup blue to the order lookup, choose `lookup match output`
 
 ![1582069241560](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582069241560.png)
 
-Double click on `Order Lookup` to open the editor. Choose Northwind_dw connection manager. Choose Dim orders dimension. 
+Double click on `Order Lookup` to open the editor. Choose `Northwind_DW` connection manager. Choose `Dim Orders` dimension. 
 
 ![1582069358609](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582069358609.png)
 
-In “Columns” section of editor, link OrderID, choose ‘Order Skey’.
+In `Columns` section of editor, link `OrderID`, choose `Order Skey`.
 
 ![1582086595545](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582086595545.png)
 
-24. Choose another lookup and drag it onto the workspace, rename it as `Product Lookup`. Connect "Order Lookup" to "Product Lookup". Double click on it to open the editor. Choose Northwind_dw connection manager. Choose Dim Products dimension. 
+24. Choose another lookup and drag it onto the workspace, rename it as `Product Lookup`. Connect `Order Lookup` to `Product Lookup`. Double click on it to open the editor. Choose `Northwind_DW` connection manager. Choose `Dim Products` dimension. 
 
 ![1582069670763](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582069670763.png)
 
@@ -170,7 +170,7 @@ In “Columns” section of editor, link OrderID, choose ‘Order Skey’.
 
 
 
-25. Similar to "Time Lookup", use sql codes below to create lookups for employee, category, supplier, shipper.
+25. Similar to `Time Lookup`, use sql codes below to create lookups for employee, category, supplier, shipper.
 
 `Employee Lookup`
 
@@ -226,7 +226,7 @@ where do.ShipVia= ds.ShipperID;
 
 ![1582070661351](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070661351.png)
 
-26. Drag ‘OLE DB destination’, double click, choose ‘Fact Order Details’ from Northwind_DW: 
+26. Drag `OLE DB destination`, double click, choose `Fact Order Details` from Northwind_DW: 
 
 ![1582070833817](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070833817.png)
 
@@ -240,7 +240,7 @@ The Foreign keys in the inventory fact table are populated from the dimension ta
 
 27. Truncate the data warehouse database tables:
 
-Click the "Control Flow" tab. Drag ‘Execute SQL Task’ task onto the design surface of the Data Flow tab. connect "Execute SQL task" to "Order Dimension"
+Click the `Control Flow` tab. Drag `Execute SQL Task` task onto the design surface of the Data Flow tab. connect `Execute SQL task` to `Order Dimension`
 
 ![1582072972058](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582072972058.png)
 
@@ -252,7 +252,7 @@ In General tab, Configure your SQL Connection to Northwind_DW
 
  
 
-Add the attached SQL query to truncate all tables next to "SQLStatement". Click OKs.
+Add the attached SQL query to truncate all tables next to `SQLStatement`. Click OKs.
 
 ```sql
 TRUNCATE TABLE [Dim Categories];
@@ -270,7 +270,7 @@ TRUNCATE TABLE [Fact Order Details];
 
  
 
-28. Go to control flow and click ‘start’. You should get a page like below:
+28. Go to control flow and click `start`. You should get a page like below:
 
 ![1582072839772](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582072839772.png)   
 
@@ -294,11 +294,11 @@ Done!
 
 **Note:** Put these screenshots in MS word and save it as pdf for submission. 
 
-1. Results of successfull execution in Visual Studion in Step 28 like the following (areas labelled in yellow must be included in your screenshot): 
+1. Results of successful execution in Visual Studio in Step 28 like the following (areas labeled in yellow must be included in your screenshot): 
 ![1582073888490](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582073888490.png)
 
 
 
-2. Top rows of Fact table in Northwind_DW in step 29 ((areas labelled in yellow must be included in your screenshot):
+2. Top rows of `Fact table` in `Northwind_DW` in step 29 (areas labeled in yellow must be included in your screenshot):
 
 ![1582073678934](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582073678934.png)
