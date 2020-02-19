@@ -294,11 +294,11 @@ Done!
 
 **Note:** Put these screenshots in MS word and save it as pdf for submission. 
 
-1. Results of successfull execution in Visual Studion in Step 28 like the following (areas labelled in yellow a must be included in your screenshot): 
+1. Results of successfull execution in Visual Studion in Step 28 like the following (areas labelled in yellow must be included in your screenshot): 
 ![1582073888490](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582073888490.png)
 
 
 
-2. Top rows of Fact table in Northwind_DW in step 29 ((areas labelled in yellow a must be included in your screenshot):
+2. Top rows of Fact table in Northwind_DW in step 29 ((areas labelled in yellow must be included in your screenshot):
 
 ![1582073678934](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582073678934.png)
