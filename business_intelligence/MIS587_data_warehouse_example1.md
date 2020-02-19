@@ -90,7 +90,7 @@ Using Microsoft Visual Studio, Microsoft SQL server is accessed for the data int
 
 12. In the field “Server Name”, Type in the name of the Microsoft SQL Server installed on your computer. In SQL Sever Management Studio, the name to choose is shown by right click on your server name, choose `Properties`.
 
-![Screenshot] (https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/Screenshot1.png)
+![Screenshot] (https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/screenshot1.png)
 
 ![10](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/10.PNG)
 
@@ -122,9 +122,11 @@ Using Microsoft Visual Studio, Microsoft SQL server is accessed for the data int
 
 18. The Inventory Fact table is loaded from the Inventory “order details” table. We already create an empty Fact table in Northwind_DW, foreign key placeholders are created, which will be populated later.
 
-    Similarly, drag ‘Data Flow Task’, rename it as `Fact Table`, double click, Like before, drag the DB source from the left pane, select ‘order details’ from Northwind database.
+    Similarly, drag ‘Data Flow Task’, rename it as `Fact Table`, double click, Like before:
 
 ![1582067872939](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582067872939.png)
+
+Drag the DB source from the left pane, select 'Order Details' from Northwind database.
 
 ![1582068027442](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582068027442.png)
 
@@ -158,13 +160,13 @@ Double click on `Order Lookup` to open the editor. Choose Northwind_dw connectio
 
 In “Columns” section of editor, link OrderID, choose ‘Order Skey’.
 
-![1582069398259](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582069398259.png)
+![1582086595545](MIS587_data_warehouse_example1.assets/1582086595545.png)
 
 24. Choose another lookup and drag it onto the workspace, rename it as `Product Lookup`. Connect "Order Lookup" to "Product Lookup". Double click on it to open the editor. Choose Northwind_dw connection manager. Choose Dim Products dimension. 
 
 ![1582069670763](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582069670763.png)
 
-![1582069750875](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582069750875.png)
+![1582086661830](MIS587_data_warehouse_example1.assets/1582086661830.png)
 
 
 
@@ -278,7 +280,7 @@ TRUNCATE TABLE [Fact Order Details];
 
 29. Go to Microsoft SQL server. The tables in the Northwind_DW database must have values now.
 
-![Screenshot] (https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/Screenshot2.png)
+![Screenshot] (https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/screenshot2.png)
 
 ![1582073629870](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582073629870.png)
 
