@@ -90,7 +90,7 @@ Using Microsoft Visual Studio, Microsoft SQL server is accessed for the data int
 
 12. In the field “Server Name”, Type in the name of the Microsoft SQL Server installed on your computer. In SQL Sever Management Studio, the name to choose is shown by right click on your server name, choose `Properties`.
 
-![Screenshot (https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/Screenshot (1).png)](C:/Users/hao/Pictures/Screenshots/Screenshot (1).png)
+![Screenshot] (https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/Screenshot1.png)
 
 ![10](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/10.PNG)
 
@@ -278,7 +278,7 @@ TRUNCATE TABLE [Fact Order Details];
 
 29. Go to Microsoft SQL server. The tables in the Northwind_DW database must have values now.
 
-![Screenshot (https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/Screenshot (2).png)](C:/Users/hao/Pictures/Screenshots/Screenshot (2).png)
+![Screenshot] (https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/Screenshot2.png)
 
 ![1582073629870](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582073629870.png)
 
