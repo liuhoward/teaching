@@ -131,60 +131,105 @@ Using Microsoft Visual Studio, Microsoft SQL server is accessed for the data int
 
 ![1582068242165](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582068242165.png)
 
+20.  Click on the lookup icon. Click "Connection", Choose the Northwind_DW connection manager. Choose “Use results of a SQL query”. And paste the query below.
 
-22) Click on the lookup icon. Choose the Northwind_DW connection manager. Choose “Use results of a SQL query”. And paste the query from the “Time” section in the below text file.
+```sql
+Select do.OrderID, dt.[Time skey] 
+from Dim_Time dt, [Dim Orders] do 
+where do.OrderDate= dt.Date;
+```
 
-   
+![1582071385129](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582071385129.png)
 
- 
+21. In the “columns” section of the editor, link orderID. Choose “Time Skey”. Click Ok. 
 
-   
+ ![1582071450161](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582071450161.png)
 
- 
+22. Rename the lookup as `Time Lookup`. Join with “OLE DB source” using blue line.
 
-23) In the “columns” section of the editor, link orderID. Choose “Date Skey”. Click Ok. 
+23. Choose another lookup and drag it onto the workspace, rename it as `Order Lookup`. Connect time lookup blue to the order lookup, choose ‘lookup match output’
 
- 
+![1582069241560](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582069241560.png)
 
- 
+Double click on `Order Lookup` to open the editor. Choose Northwind_dw connection manager. Choose Dim orders dimension. 
 
-   
+![1582069358609](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582069358609.png)
 
-24) Rename the lookup as “Time Lookup”. Join with “OLE DB source” using blue line.
+In “Columns” section of editor, link OrderID, choose ‘Order Skey’.
 
-25) Choose another lookup and drag it onto the workspace, rename it as ‘order lookup’. Connect time lookup blue to the order lookup, choose ‘lookup match output’
+![1582069398259](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582069398259.png)
 
-   
+24. Choose another lookup and drag it onto the workspace, rename it as `Product Lookup`. Connect "Order Lookup" to "Product Lookup". Double click on it to open the editor. Choose Northwind_dw connection manager. Choose Dim Products dimension. 
 
-Double click on it to open the editor. Choose Northwind_dw connection manager. Choose Dim orders dimension.     
+![1582069670763](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582069670763.png)
 
-In “columns” section of editor, link OrderID, choose ‘Order Skey’.
+![1582069750875](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582069750875.png)
 
-   
 
- 
 
-26) Choose another lookup and drag it onto the workspace, rename it as ‘product lookup’. Double click on it to open the editor. Choose Northwind_dw connection manager. Choose Dim Products dimension.
+25. Similar to "Time Lookup", use sql codes below to create lookups for employee, category, supplier, shipper.
 
-   
+`Employee Lookup`
 
- 
+```sql
+Select do.OrderID, de.[Employee skey]
+from [Dim Employees] de, [Dim Orders] do
+where do.EmployeeID= de.EmployeeID;
+```
 
-​    
+![1582070077155](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070077155.png)
 
- 
+![1582070112779](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070112779.png)
 
-27)  Similar to “Time” lookup, sql codes corresponding to each lookup are given in the “Dimension join codes.txt” file. create lookups for employee, category, supplier, shipper.
 
-   
 
-28)  Drag ‘OLE DB destination’, double click, choose ‘Fact Order Details’ from Northwind_DW:   
+`Category Lookup`
 
- 
+```sql
+select dc.[Category Skey],dp.ProductID 
+from [Dim Products] dp, [Dim Categories] dc
+where dp.CategoryID=dc.CategoryID;
+```
+
+![1582070373940](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070373940.png)
+
+![1582070407098](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070407098.png)
+
+`Supplier Lookup`
+
+```sql
+select ds.[Supplier Skey],dp.ProductID 
+from [Dim Products] dp, [Dim Suppliers] ds 
+where dp.SupplierID=ds.SupplierID;
+```
+
+![1582070497760](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070497760.png)
+
+![1582070517335](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070517335.png)
+
+`Shipper Lookup`
+
+```sql
+Select do.OrderID, ds.[Shipper skey]
+from [Dim Shippers] ds, [Dim Orders] do
+where do.ShipVia= ds.ShipperID;
+```
+
+![1582070579650](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070579650.png)
+
+![1582070606898](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070606898.png)
+
+  So we have lookups for fact table:
+
+![1582070661351](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070661351.png)
+
+26. Drag ‘OLE DB destination’, double click, choose ‘Fact Order Details’ from Northwind_DW:   
+
+![1582070833817](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070833817.png)
 
 The Foreign keys in the inventory fact table are populated from the dimension tables by matching the primary keys from their respective dimension tables.
 
-   
+![1582071812175](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582071812175.png)
 
  
 
