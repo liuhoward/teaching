@@ -223,7 +223,7 @@ where do.ShipVia= ds.ShipperID;
 
 ![1582070661351](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070661351.png)
 
-26. Drag ‘OLE DB destination’, double click, choose ‘Fact Order Details’ from Northwind_DW:   
+26. Drag ‘OLE DB destination’, double click, choose ‘Fact Order Details’ from Northwind_DW: 
 
 ![1582070833817](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582070833817.png)
 
@@ -231,129 +231,67 @@ The Foreign keys in the inventory fact table are populated from the dimension ta
 
 ![1582071812175](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582071812175.png)
 
- 
+![1582072231804](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582072231804.png)
 
    
 
- 
+27. Truncate the data warehouse database tables:
 
-29)   Truncate the data warehouse database tables:
+Click the "Control Flow" tab. Drag ‘Execute SQL Task’ task onto the design surface of the Data Flow tab. connect "Execute SQL task" to "Order Dimension"
 
-Click the Control Flow tab.
+![1582072972058](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582072972058.png)
 
-Drag ‘Execute SQL Task’ task onto the design surface of the Data Flow tab.
+Right-click the task component and when click Edit. 
 
-   
+In General tab, Configure your SQL Connection to Northwind_DW
 
-Right-click the task component and when click Edit.
-
-In General tab, Configure your SQL Connection
-
-   
+![1582072482373](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582072482373.png)
 
  
 
-Add the attached SQL query to truncate all tables before running the package next to ‘SQLStatement.
+Add the attached SQL query to truncate all tables next to "SQLStatement". Click OKs.
 
-   
+```sql
+TRUNCATE TABLE [Dim Categories];
+TRUNCATE TABLE [Dim Employees];
+TRUNCATE TABLE [Dim Orders];
+TRUNCATE TABLE [Dim Products];
+TRUNCATE TABLE [Dim Shippers];
+TRUNCATE TABLE [Dim Suppliers];
+TRUNCATE TABLE [Fact Order Details];
+```
 
-   
+![1582072592908](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582072592908.png)
 
- 
-
-   
-
- 
-
- 
-
-30) Go to control flow and click ‘start’. You should get a page like below:
-
-   
+![1582072642703](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582072642703.png)
 
  
+
+28. Go to control flow and click ‘start’. You should get a page like below:
+
+![1582072839772](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582072839772.png)   
 
 (you can stop it by clicking red square button)
 
-   
+![1582073179868](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582073179868.png)  
 
-31) Go to Microsoft SQL server. The tables in the Northwind_DW database must have values now.
+29. Go to Microsoft SQL server. The tables in the Northwind_DW database must have values now.
 
-   
+![Screenshot (https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/Screenshot (2).png)](C:/Users/hao/Pictures/Screenshots/Screenshot (2).png)
 
+![1582073629870](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582073629870.png)
 
 
 
+Done!
 
 
+----------------------------------
 
+## Submission
 
 
 
+![1582073888490](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582073888490.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-===============================================================================================
-
-
-
-
-
+![1582073678934](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582073678934.png)
