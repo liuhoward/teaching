@@ -160,13 +160,13 @@ Double click on `Order Lookup` to open the editor. Choose Northwind_dw connectio
 
 In “Columns” section of editor, link OrderID, choose ‘Order Skey’.
 
-![1582086595545](MIS587_data_warehouse_example1.assets/1582086595545.png)
+![1582086595545](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582086595545.png)
 
 24. Choose another lookup and drag it onto the workspace, rename it as `Product Lookup`. Connect "Order Lookup" to "Product Lookup". Double click on it to open the editor. Choose Northwind_dw connection manager. Choose Dim Products dimension. 
 
 ![1582069670763](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582069670763.png)
 
-![1582086661830](MIS587_data_warehouse_example1.assets/1582086661830.png)
+![1582086661830](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582086661830.png)
 
 
 
