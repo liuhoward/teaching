@@ -1,6 +1,7 @@
 # MIS 587 Guide to Data Warehouse Creation using SSIS Package
 
 
+(For more materials and examples, go to [shared link](https://drive.google.com/drive/folders/1Qr5WbOvNK3JHDyUwpoiNvETpJd482ZKB?usp=sharing))
 
 [TOC]
 
