@@ -4,7 +4,7 @@
 
 Please follow below steps to setup and install below software, make sure your hard drive has at least 20GB free space: 
 
-(For MAC users, ask IT to install Windows and perform below steps or borrow a windows laptop from UA library)
+(For MAC users, ask IT to install Windows 10 and perform below steps or borrow a windows laptop from UA library)
 
 
 [TOC]
