@@ -117,8 +117,9 @@ Choose server type as Database Engine, Appropriate server name and authenticatio
 ### 7. NOTE
 
 1. For MAC users, ask IT to install Windows or borrow a Windows laptop from UA library and perform above steps 
+2. If you use Visual Studio 2019, please refer this [link](https://blog.pragmaticworks.com/visual-studio-2019-bi-design-tool-extensions) to implement installation and tutorial.
 
-2. If you are not able to find the instance name/ Server name to connect to database engine. Follow below steps: 
+3. If you are not able to find the instance name/ Server name to connect to database engine. Follow below steps: 
 
 Navigate to: 
 
@@ -126,7 +127,7 @@ Start->All Program->Microsoft SQL Server-> Configuration Tools-> SQL Server Conf
 
 Verify the name of server instance. Check the state of Server instance. It should be in running state
 
-3. If you encounter error when you install SQL Server Express, please check the service `Windows module installer` is running as following:
+4. If you encounter error when you install SQL Server Express, please check the service `Windows module installer` is running as following:
 
 * press `win + r`, input 'services.msc'
 
@@ -140,6 +141,6 @@ Verify the name of server instance. Check the state of Server instance. It shoul
 
   ![3](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/3.PNG)
 
-4. You can use the following or any other such video as a guide to install
+5. You can use the following or any other such video as a guide to install
 
 https://www.youtube.com/watch?v=UcsItGq3mmM
