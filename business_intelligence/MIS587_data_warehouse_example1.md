@@ -108,7 +108,7 @@ Using Microsoft Visual Studio, Microsoft SQL server is accessed for the data int
 ![1582066668981](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582066668981.png)
 
 
-16. After the new connection manager has been set up, Choose `Dim Orders`. This is a dimension created to hold basic qualitative attributes about orders. Click `Mappings`, then Choose OK. `Errors` of `OLE DB Source` and `OLE DB Destination` disappear. ([`Keep identity`](http://bageshkumarbagi-msbi.blogspot.com/2019/09/keep-identity-option-in-oledb.html))
+16. After the new connection manager has been set up, Choose `Dim Orders`. This is a dimension created to hold basic qualitative attributes about orders. Click `Mappings`, then Choose OK. `Errors` of `OLE DB Source` and `OLE DB Destination` disappear. (`Keep identity`: [link1](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server?view=sql-server-ver15#keep_identity), [link2](http://bageshkumarbagi-msbi.blogspot.com/2019/09/keep-identity-option-in-oledb.html))
 
 ![1582066842117](https://github.com/liuhoward/teaching/raw/master/business_intelligence/dw_assets/1582066842117.png)
 
