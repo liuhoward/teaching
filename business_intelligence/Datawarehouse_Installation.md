@@ -10,37 +10,47 @@ Please follow below steps to setup and install below software, make sure your ha
 [TOC]
 
 ### 1. Visual Studio Community
-Download Visual Studio Community  from the Developers Tool section of Microsoft Imagine. Install the visual studio without Add-On’s (around 600 MB size) 
+Download Visual Studio Community 2019  from https://visualstudio.microsoft.com/vs/older-downloads/. Install the visual studio:
 
-https://docs.microsoft.com/en-us/visualstudio/releasenotes/vs2017-relnotes
+scroll down to select `Data storage and processing`, on your right side, select `SQL Server Data Tools`.
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image001.png)
+![image-20201224150827471](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224150827471.png)
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image003.png)
+![image-20201224151407958](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224151407958.png)
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image005.png)
+![image-20201224151629376](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224151629376.png)
+
+![image-20201224153340398](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224153340398.png)
 
 
 
 
 ### 2. SQL Server Express
-Download SQL Server Express from https://www.microsoft.com/en-us/download/details.aspx?id=55994
+Download SQL Server Express 2019 from https://www.microsoft.com/en-us/sql-server/sql-server-downloads
 
 Click on `Customize`. Follow the instructions to set up SQL Server. Make a note of Server Instance Name. Choose authentication as Windows Authentication 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image007.png)
+![image-20201224154020869](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224154020869.png)
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image009.png)
+![image-20201224154119995](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224154119995.png)
+
+![image-20201224154920149](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224154920149.png)
 
  
 
 Click “New SQL Server stand-alone installation or add features …”
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image011.png)
+![image-20201224155107105](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224155107105.png)
 
 
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image013.png)
+
+
+
+
+
+????????????????????????????????
 
 
 
