@@ -12,7 +12,7 @@ Please follow below steps to setup and install below software, make sure your ha
 ### 1. Visual Studio Community
 Download Visual Studio Community 2019  from https://visualstudio.microsoft.com/vs/older-downloads/. Install the visual studio:
 
-scroll down to select `Data storage and processing`, on your right side, select `SQL Server Data Tools`.
+scroll down to select `Data storage and processing`, on your right side, select `SQL Server Data Tools` (If you already installed Visual Studio 2019, please refer this [link](https://blog.pragmaticworks.com/visual-studio-2019-bi-design-tool-extensions) to install the `SQL Server Data Tools`).
 
 ![image-20201224150827471](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224150827471.png)
 
@@ -42,37 +42,33 @@ Click “New SQL Server stand-alone installation or add features …”
 
 ![image-20201224155107105](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224155107105.png)
 
-
-
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image013.png)
-
-
-
-
-
-????????????????????????????????
+![image-20201224164640780](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224164640780.png)
 
 
 
 If have Windows Firewall warning, You can turn off firewall in control panel or enable the required ports following the link  
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image015.png)
+![image-20201224164946540](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224164946540.png)
+
+![image-20201224165435335](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224165435335.png)
+
+![image-20201224165608197](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224165608197.png)
+
+![image-20201224165718958](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224165718958.png)
+
+![image-20201224165751601](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224165751601.png)
+
+**Remember the `Specify SQL Server administrators`**
+
+![image-20201224165842330](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224165842330.png)
 
 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image017.png)
 
 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image019.png)
 
 
-
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image021.png)
-
-
-
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image023.png)
 
 
 
@@ -80,7 +76,7 @@ If have Windows Firewall warning, You can turn off firewall in control panel or 
 
  
 
-**Attention:** if you encounter errors, you may check the service `windows modules installer` is running following the **[7. Note](#7. Note)** part in the end of this tutorial.
+**Attention:** if you encounter errors, you may check the service `windows modules installer` is running following the **[6. Note](#6. Note)** part in the end of this tutorial.
 
 ### 3.  SQL Server Management studio
 Download SQL Server Management studio (latest version) from https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
@@ -92,26 +88,19 @@ Execute the installation files
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image027.png)
 
- 
 
-### 4. SQL Server Data Tools
-Download SQL Server Data Tools (Download SSDT for Visual Studio 2017) from https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt
-find `SSDT standalone installer`
-https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017#ssdt-for-vs-2017-standalone-installer
-
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image029.png)
 
  
 
-### 5. After SQL Server Data Tools has been installed, open Visual Studio 2017. 
+### 4. After SQL Server Data Tools has been installed, open Visual Studio. 
 
-After opening Visual Studio 2017, choose `File -> New -> Project`, from left sidebar, you should be able to find Installed -> Business Intelligence -> Integration Services, and create new project.
+After opening Visual Studio 2019, choose `File -> New -> Project`, from left sidebar, you should be able to find Installed -> Business Intelligence -> Integration Services, and create new project.
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image031.png)
 
  
 
-### 6. Open Microsoft SQL server Management Studio. 
+### 5. Open Microsoft SQL server Management Studio. 
 Choose server type as Database Engine, Appropriate server name and authentication as Windows Authentication. Click Connect. You should get an object explorer window. On drilling down, you can see various folders, one of which is databases.
 
 ![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image033.png)
@@ -124,11 +113,9 @@ Choose server type as Database Engine, Appropriate server name and authenticatio
 
  
 
-### 7. NOTE
+### 6. NOTE
 
 1. For MAC users, ask IT to install Windows or borrow a Windows laptop from UA library and perform above steps 
-2. If you use Visual Studio 2019, please refer this [link](https://blog.pragmaticworks.com/visual-studio-2019-bi-design-tool-extensions) to implement installation and tutorial.
-
 3. If you are not able to find the instance name/ Server name to connect to database engine. Follow below steps: 
 
 Navigate to: 
