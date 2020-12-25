@@ -14,13 +14,13 @@ Download Visual Studio Community 2019  from https://visualstudio.microsoft.com/v
 
 scroll down to select `Data storage and processing`, on your right side, select `SQL Server Data Tools` (If you already installed Visual Studio 2019, please refer this [link](https://blog.pragmaticworks.com/visual-studio-2019-bi-design-tool-extensions) to install the `SQL Server Data Tools`).
 
-![image-20201224150827471](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224150827471.png)
+![image-20201224150827471](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224150827471.png)
 
-![image-20201224151407958](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224151407958.png)
+![image-20201224151407958](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224151407958.png)
 
-![image-20201224151629376](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224151629376.png)
+![image-20201224151629376](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224151629376.png)
 
-![image-20201224153340398](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224153340398.png)
+![image-20201224153340398](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224153340398.png)
 
 
 
@@ -30,37 +30,37 @@ Download SQL Server Express 2019 from https://www.microsoft.com/en-us/sql-server
 
 Click on `Customize`. Follow the instructions to set up SQL Server. Make a note of Server Instance Name. Choose authentication as Windows Authentication 
 
-![image-20201224154020869](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224154020869.png)
+![image-20201224154020869](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224154020869.png)
 
-![image-20201224154119995](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224154119995.png)
+![image-20201224154119995](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224154119995.png)
 
-![image-20201224154920149](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224154920149.png)
+![image-20201224154920149](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224154920149.png)
 
  
 
 Click “New SQL Server stand-alone installation or add features …”
 
-![image-20201224155107105](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224155107105.png)
+![image-20201224155107105](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224155107105.png)
 
-![image-20201224164640780](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224164640780.png)
+![image-20201224164640780](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224164640780.png)
 
 
 
 If have Windows Firewall warning, You can turn off firewall in control panel or enable the required ports following the link  
 
-![image-20201224164946540](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224164946540.png)
+![image-20201224164946540](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224164946540.png)
 
-![image-20201224165435335](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224165435335.png)
+![image-20201224165435335](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224165435335.png)
 
-![image-20201224165608197](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224165608197.png)
+![image-20201224165608197](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224165608197.png)
 
-![image-20201224165718958](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224165718958.png)
+![image-20201224165718958](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224165718958.png)
 
-![image-20201224165751601](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224165751601.png)
+![image-20201224165751601](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224165751601.png)
 
 **Remember the `Specify SQL Server administrators`**
 
-![image-20201224165842330](D:\Downloads\teaching\business_intelligence\Datawarehouse_Installation.assets\image-20201224165842330.png)
+![image-20201224165842330](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224165842330.png)
 
 
 
