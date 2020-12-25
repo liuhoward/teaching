@@ -62,19 +62,11 @@ If have Windows Firewall warning, You can turn off firewall in control panel or 
 
 ![image-20201224165842330](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224165842330.png)
 
+Finish installation without any errors:
+
+![image-20201224175133254](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224175133254.png)
 
 
-
-
-
-
-
-
-
-
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image025.png)
-
- 
 
 **Attention:** if you encounter errors, you may check the service `windows modules installer` is running following the **[6. Note](#6. Note)** part in the end of this tutorial.
 
