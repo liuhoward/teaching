@@ -2,7 +2,7 @@
 
 
 
-Please follow below steps to setup and install below software, make sure your hard drive has at least 20GB free space: 
+Please follow below steps to setup and install below software, make sure your hard drive has at least 30GB free space: 
 
 (For MAC users, ask IT to install Windows 10 and perform below steps or borrow a windows laptop from UA library)
 
@@ -21,6 +21,16 @@ scroll down to select `Data storage and processing`, on your right side, select 
 ![image-20201224151629376](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224151629376.png)
 
 ![image-20201224153340398](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224153340398.png)
+
+
+
+Install `SQL Server Integration Services Projects`:
+
+https://marketplace.visualstudio.com/items?itemName=SSIS.SqlServerIntegrationServicesProjects
+
+![image-20201224184639528](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224184639528.png)
+
+![image-20201224184702894](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224184702894.png)
 
 
 
@@ -78,7 +88,7 @@ Click on `Download SQL Server Management Studio (SSMS)`
 Execute the installation files 
 
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image027.png)
+![image-20201224181654713](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224181654713.png)
 
 
 
@@ -86,20 +96,22 @@ Execute the installation files
 
 ### 4. After SQL Server Data Tools has been installed, open Visual Studio. 
 
-After opening Visual Studio 2019, choose `File -> New -> Project`, from left sidebar, you should be able to find Installed -> Business Intelligence -> Integration Services, and create new project.
+After opening Visual Studio 2019, click `Continue without code`, choose `File -> New -> Project`,  you should be able to find  `Integration Services Project`, and create a new project.
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image031.png)
+ ![image-20201224185934191](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224185934191.png)
 
- 
+![image-20201224190300330](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224190300330.png)
+
+
 
 ### 5. Open Microsoft SQL server Management Studio. 
 Choose server type as Database Engine, Appropriate server name and authentication as Windows Authentication. Click Connect. You should get an object explorer window. On drilling down, you can see various folders, one of which is databases.
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image033.png)
+![image-20201224190427559](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224190427559.png)
 
  
 
-![img](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/clip_image035.png)
+![image-20201224190453031](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/image-20201224190453031.png)
 
  
 
@@ -116,7 +128,7 @@ Start->All Program->Microsoft SQL Server-> Configuration Tools-> SQL Server Conf
 
 Verify the name of server instance. Check the state of Server instance. It should be in running state
 
-4. If you encounter error when you install SQL Server Express, please check the service `Windows module installer` is running as following:
+3. If you encounter error when you install SQL Server Express, please check the service `Windows module installer` is running as following:
 
 * press `win + r`, input 'services.msc'
 
@@ -130,6 +142,6 @@ Verify the name of server instance. Check the state of Server instance. It shoul
 
   ![3](https://github.com/liuhoward/teaching/raw/master/business_intelligence/install_assets/3.PNG)
 
-5. You can use the following or any other such video as a guide to install
+4. You can use the following or any other such video as a guide to install
 
 https://www.youtube.com/watch?v=UcsItGq3mmM
